@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Aradığın Bulunamadı</title>
+</head>
+<body style="text-align: center;">
+  <h1>Aradığın Bulunamadı</h1>
+  <h2>Şimdi Anasayfaya yönlendirileceksin. </h2>
+  <h1 id="sayac"></h1>
+  <script>
+    let sayac = 4;
+    sayaciGuncelle();
+    function sayaciGuncelle(){
+     if(!(sayac<=0)){
+      sayac -= 1; 
+      document.getElementById("sayac").textContent = sayac;
+      }
+    }
+    
+    setInterval(sayaciGuncelle, 1000);
+    
+    setTimeout(()=>{
+      window.location.href = "/";
+    },4000);
+  </script>
+</body>
+</html>
